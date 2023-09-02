@@ -37,11 +37,13 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('images'),
+                Tables\Columns\ImageColumn::make('images'),
                 Tables\Columns\TextColumn::make('price'),
-                Tables\Columns\TextColumn::make('category_id'),
+                Tables\Columns\TextColumn::make('category.name')
+                
+                ,
                 Tables\Columns\TextColumn::make('quantity'),
-                Tables\Columns\TextColumn::make('status'),
+                Tables\Columns\IconColumn::make('status')->boolean(),
             ])
             ->filters([
                 //
