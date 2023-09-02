@@ -16,10 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('images');
             $table->decimal('price',10,2);
-            $table->unsignedBigInteger('catagory_id');
-            $table->foreign('catagory_id')->references('id')->on('catagories');
+            $table->foreignId('category_id')->nullable()->constrained()->nullOnDelete();
             $table->integer('quantity');
-            $table->tinyInteger('status');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
