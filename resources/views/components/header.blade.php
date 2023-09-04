@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="vi">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    {{-- @stack('styles') --}}
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @livewireStyles
-</head>
-
-<body>
-    <header>
-        
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="https://flowbite.com/" class="flex items-center">
@@ -54,16 +36,3 @@
       </div>
     </div>
   </nav>
-
-    </header>
-    <!-- Page Content -->
-    <main>
-        {{ $slot }}
-    </main>
-    <x-newsletter></x-newsletter>
-    <x-footer></x-footer>
-    @livewireScripts
-    @stack('scripts')
-</body>
-
-</html>
